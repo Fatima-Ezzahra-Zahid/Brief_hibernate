@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/EventManagement</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">root</property>
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+    <!-- thread is the short name for org.hibernate.context.ThreadLocalSessionContext -->
+    <property name="current_session_context_class">thread</property>
+
+    <!-- Set "true" to show SQL statements -->
+    <property name="hibernate.show_sql">true</property>
+
+    <property name="hbm2ddl.auto">update</property>
+
+
+    <!-- mapping class using annotation -->
+    <mapping  class="ma.youcode.BriefHibernate.Entity.TypeActivities"/>
+    <mapping class="ma.youcode.BriefHibernate.Entity.Activities"/>
+    <mapping class="ma.youcode.BriefHibernate.Entity.Specialite"/>
+    <mapping class="ma.youcode.BriefHibernate.Entity.Role"/>
+<!--    <mapping class="ma.youcode.BriefHibernate.Entity.Learner"/>-->
+  </session-factory>
+
+</hibernate-configuration>

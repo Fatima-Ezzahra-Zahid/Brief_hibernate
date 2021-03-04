@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="EventManagement@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.20">
+    <root id="1">
+      <ServerVersion>13.1</ServerVersion>
+      <StartupTime>1614120704</StartupTime>
+    </root>
+    <database id="2" parent="1" name="Clients">
+      <ObjectId>16444</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="EventManagement">
+      <ObjectId>16587</ObjectId>
+      <Owner>postgres</Owner>
+      <Current>1</Current>
+    </database>
+    <database id="4" parent="1" name="Plateforme">
+      <ObjectId>16394</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="Testing">
+      <ObjectId>16544</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="postgres">
+      <ObjectId>13442</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="7" parent="1" name="test">
+      <ObjectId>16512</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+  </database-model>
+</dataSource>
