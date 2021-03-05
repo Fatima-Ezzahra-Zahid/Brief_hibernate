@@ -1,26 +1,28 @@
 package ma.youcode.BriefHibernate.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
 import javax.persistence.*;
 
 
 @Entity
-public class Learner extends  User  {
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Learner extends UserAdmin {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id_lea;
-  @ManyToOne(fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "id_sp" )
   private Specialite specialite;
 
-
-  public int getId_lea() {
-    return id_lea;
+  public Learner(int id_user, String FirstName, String lastName, String email, String password) {
+    super(id_user, FirstName, lastName, email, password);
+    this.specialite = specialite;
   }
 
-  public void setId_lea(int id_lea) {
-    this.id_lea = id_lea;
-  }
+
 
   public Specialite getSpecialite() {
     return specialite;

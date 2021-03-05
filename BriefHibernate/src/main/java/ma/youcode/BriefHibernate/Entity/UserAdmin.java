@@ -8,15 +8,12 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-//@DiscriminatorColumn(name = "Type")
+@Inheritance(strategy = InheritanceType.JOINED)
 @SuperBuilder
-//@NoArgsConstructor
-//@AllArgsConstructor
-
-
-public class User  {
-  //private static final long serialVersionUID = 1L;
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserAdmin {
+  private static final long serialVersionUID = 1L;
 
   @Id
   @GeneratedValue(strategy =GenerationType.IDENTITY)
@@ -26,17 +23,6 @@ public class User  {
   private String email;
   private String password;
 
-public User()
-{
-
-}
-  public User(int id_user, String firstName, String lastName, String email, String password) {
-    this.id_user = id_user;
-    FirstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-    this.password = password;
-  }
 
   public int getId_user() {
     return id_user;

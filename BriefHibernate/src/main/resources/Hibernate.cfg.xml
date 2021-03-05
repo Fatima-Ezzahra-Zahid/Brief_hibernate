@@ -10,7 +10,7 @@
     <property name="connection.username">postgres</property>
     <property name="connection.password">root</property>
     <!-- SQL dialect -->
-    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
 
     <!-- thread is the short name for org.hibernate.context.ThreadLocalSessionContext -->
     <property name="current_session_context_class">thread</property>
@@ -18,7 +18,7 @@
     <!-- Set "true" to show SQL statements -->
     <property name="hibernate.show_sql">true</property>
 
-    <property name="hbm2ddl.auto">update</property>
+    <property name="hbm2ddl.auto">create</property>
 
 
     <!-- mapping class using annotation -->
@@ -26,7 +26,9 @@
     <mapping class="ma.youcode.BriefHibernate.Entity.Activities"/>
     <mapping class="ma.youcode.BriefHibernate.Entity.Specialite"/>
     <mapping class="ma.youcode.BriefHibernate.Entity.Role"/>
-<!--    <mapping class="ma.youcode.BriefHibernate.Entity.Learner"/>-->
+    <mapping class="ma.youcode.BriefHibernate.Entity.UserAdmin"/>
+    <mapping class="ma.youcode.BriefHibernate.Entity.Learner"/>
+    <mapping class="ma.youcode.BriefHibernate.Entity.Teacher"/>
   </session-factory>
 
 </hibernate-configuration>

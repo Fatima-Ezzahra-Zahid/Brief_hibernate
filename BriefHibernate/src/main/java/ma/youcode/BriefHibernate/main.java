@@ -1,6 +1,7 @@
 package ma.youcode.BriefHibernate;
 
 import ma.youcode.BriefHibernate.Entity.Activities;
+import ma.youcode.BriefHibernate.Entity.Learner;
 import ma.youcode.BriefHibernate.Entity.TypeActivities;
 import org.hibernate.Session;
 
@@ -19,6 +20,7 @@ public class main {
     activities.setDate_d("22-02-2020");
     activities.setDate_f("22-03-2021");
     session.persist(activities);
+    Learner learner = new Learner(1,"Empty","Empty","Empty","Empty");
    // activities.setTypeActivities(typeActivities);
     session.getTransaction().commit();
     System.out.println("bien Ajouté");
